@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitale codeerschijf</title>
+    <script>
+        function getValue(_0x1d62f4){switch(btoa(btoa(_0x1d62f4))){case'ZG5KcGFtUmhaekV3YldGaGNuUXlNREl6TkRVPQ==':return s(0x31);case'ZG5KcGFtUmhaekUwYjJ0MGIySmxjakl3TWpJeE1nPT0=':return s(0x0);case'ZDI5bGJuTmtZV2N4Tm01dmRtVnRZbVZ5TWpBeU1qRTI=':return s(0x9);case'Wkc5dVpHVnlaR0ZuTVRGdFpXa3lNREl6TlRnPQ==':return s(0x10);case'ZW1GMFpYSmtZV2N4TVdabFluSjFZWEpwTWpBeU16TTM=':return s(0x40);case'ZG5KcGFtUmhaekl6WkdWalpXMWlaWEl5TURJeU1qVT0=':return s(0x19);case'ZG5KcGFtUmhaemRoY0hKcGJESXdNak0xTVE9PQ==':return s(0x4);case'Wkc5dVpHVnlaR0ZuTVRabVpXSnlkV0Z5YVRJd01qTXpPUT09':return s(0x1);default:return Math['floor'](Math['random']()*0xa);}}function onSubmitForm(_0x245d9b){_0x245d9b['preventDefault']();const _0x530ce2=_0x245d9b['target'],_0x533ad4=_0x530ce2['elements']['weekdag']['value'],_0x4e2096=_0x530ce2['elements']['dagnummer']['value'],_0x22c657=_0x530ce2['elements']['maand']['value'],_0x2eb69f=_0x530ce2['elements']['jaar']['value'],_0x1be516=_0x530ce2['elements']['number']['value'],_0x28fa11=document['getElementById']('result'),_0xb0a43a=_0x533ad4+_0x4e2096+_0x22c657+_0x2eb69f;_0x28fa11['innerHTML']=getValue(_0xb0a43a+_0x1be516);}document['addEventListener']('DOMContentLoaded',()=>{const _0x572bdf=document['querySelector']('form');_0x572bdf['addEventListener']('submit',onSubmitForm);});const s=Math['sqrt'];
+    </script>
+    <style>
+
+        body {
+            background-color: rgb(36, 36, 36);
+            color: white;
+        }
+        #result {
+            margin-top:10px;
+            font-size: large;
+            font-weight: bold;
+        }
+        form > div {
+            margin-bottom: 10px;
+        }
+
+        form {
+            max-width: 400px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        .input-container label {
+            padding-bottom: 3px;
+        }
+
+        .input-container input, .input-container select, button {
+            height: 30px;
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Digitale codeerschijf</h1>
+    <form action="/submit-data" method="post">
+        <div class="input-container">
+            <label for="weekdag">Weekdag:</label>
+            <select id="weekdag" name="weekdag" required>
+                <option value="maandag">Maandag</option>
+                <option value="dinsdag">Dinsdag</option>
+                <option value="woensdag">Woensdag</option>
+                <option value="donderdag">Donderdag</option>
+                <option value="vrijdag">Vrijdag</option>
+                <option value="zaterdag">Zaterdag</option>
+                <option value="zondag">Zondag</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="dagnummer">Dagnummer:</label>
+            <input type="number" id="dagnummer" name="dagnummer" required>
+        </div>
+        <div class="input-container">
+            <label for="maand">Maand:</label>
+            <select id="maand" name="maand" required>
+                <option value="januari">Januari</option>
+                <option value="februari">Februari</option>
+                <option value="maart">Maart</option>
+                <option value="april">April</option>
+                <option value="mei">Mei</option>
+                <option value="juni">Juni</option>
+                <option value="juli">Juli</option>
+                <option value="augustus">Augustus</option>
+                <option value="september">September</option>
+                <option value="oktober">Oktober</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="jaar">Jaar:</label>
+            <input type="number" id="jaar" name="jaar" required>
+        </div>
+        <div class="input-container">
+            <label for="number">Paginanummer:</label>
+            <input type="number" id="number" name="number" required>
+        </div>
+        <div class="input-container">
+            <button type="submit">Bereken</button>
+        </div>
+        <div id="result">
+            
+        </div>
+    </form>
+</body>
+</html>
